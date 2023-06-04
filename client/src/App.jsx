@@ -10,6 +10,7 @@ import Messages from "./pages/messages/Messages";
 import MyGigs from "./pages/myGigs/MyGigs";
 import Orders from "./pages/orders/Orders";
 import Register from "./pages/register/Register";
+import "./app.scss";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 
 const App = () => {
