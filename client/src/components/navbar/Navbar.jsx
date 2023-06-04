@@ -1,12 +1,15 @@
 import React from "react";
 import "./Navbar.scss";
+import { Link } from "react-router-dom";
 
 function Navbar() {
     return (
         <div className="navbar">
             <div className="container">
                 <div className="logo">
-                    <span className="text">Riverr</span>
+                    {/* <Link to="/"> */}
+                    <span className="text">riverr</span>
+                    {/* </Link> */}
                     <span className="dot">.</span>
                 </div>
                 <div className="links">
