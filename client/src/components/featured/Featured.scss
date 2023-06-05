@@ -22,7 +22,7 @@
 
             span {
                 font-style: italic;
-                font-weight: lighter;
+                font-weight: 200;
             }
 
             .search {
@@ -84,6 +84,12 @@
         }
 
         .right {
+            height: 100%;
+
+            img {
+                height: 100%;
+                object-fit: contain;
+            }
         }
     }
 }
