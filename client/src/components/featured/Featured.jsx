@@ -13,13 +13,14 @@ function Featured() {
                     </h1>
                     <div className="search">
                         <div className="searchInput">
-                            <img src="./img/search.png" alt="" />
                             <input
                                 type="text"
                                 placeholder="Search for any service..."
                             />
                         </div>
-                        <button>Search</button>
+                        <button>
+                            <img src="./img/search.svg" alt="" />
+                        </button>
                     </div>
                     <div className="popular">
                         <span>Popular:</span>

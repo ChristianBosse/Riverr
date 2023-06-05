@@ -5,6 +5,7 @@ import { Link, useLocation } from "react-router-dom";
 function Navbar() {
     const [active, setActive] = useState(false);
     const [open, setOpen] = useState(false);
+    const [submenuActive, setSubmenuActive] = useState(false);
 
     const { pathname } = useLocation();
 
@@ -12,11 +13,17 @@ function Navbar() {
         window.scrollY > 0 ? setActive(true) : setActive(false);
     };
 
+    const submenuScrolling = () => {
+        window.scrollY > 100 ? setSubmenuActive(true) : setSubmenuActive(false);
+    };
+
     useEffect(() => {
         window.addEventListener("scroll", isScrolling);
+        window.addEventListener("scroll", submenuScrolling);
 
         return () => {
             window.removeEventListener("scroll", isScrolling);
+            window.removeEventListener("scroll", submenuScrolling);
         };
     }, []);
 
@@ -78,41 +85,40 @@ function Navbar() {
                     )}
                 </div>
             </div>
-            {active ||
-                (pathname !== "/" && (
-                    <>
-                        <hr />
-                        <div className="menu">
-                            <Link className="link menuLink" to="/">
-                                Graphics & Design
-                            </Link>
-                            <Link className="link " to="/">
-                                Video & Animation
-                            </Link>
-                            <Link className="link " to="/">
-                                Writting & Translation
-                            </Link>
-                            <Link className="link " to="/">
-                                AI Services
-                            </Link>
-                            <Link className="link " to="/">
-                                Digital Marketing
-                            </Link>
-                            <Link className="link " to="/">
-                                Music & Audio
-                            </Link>
-                            <Link className="link " to="/">
-                                Programming & Tech
-                            </Link>
-                            <Link className="link " to="/">
-                                Business
-                            </Link>
-                            <Link className="link " to="/">
-                                Lifestyle
-                            </Link>
-                        </div>
-                    </>
-                ))}
+            {(submenuActive || pathname !== "/") && (
+                <>
+                    <hr />
+                    <div className="menu">
+                        <Link className="link menuLink" to="/">
+                            Graphics & Design
+                        </Link>
+                        <Link className="link " to="/">
+                            Video & Animation
+                        </Link>
+                        <Link className="link " to="/">
+                            Writting & Translation
+                        </Link>
+                        <Link className="link " to="/">
+                            AI Services
+                        </Link>
+                        <Link className="link " to="/">
+                            Digital Marketing
+                        </Link>
+                        <Link className="link " to="/">
+                            Music & Audio
+                        </Link>
+                        <Link className="link " to="/">
+                            Programming & Tech
+                        </Link>
+                        <Link className="link " to="/">
+                            Business
+                        </Link>
+                        <Link className="link " to="/">
+                            Lifestyle
+                        </Link>
+                    </div>
+                </>
+            )}
         </div>
     );
 }
