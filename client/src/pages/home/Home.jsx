@@ -5,6 +5,7 @@ import TrustedBy from "../../components/trustedBy/TrustedBy";
 import Slide from "../../components/Slide/Slide";
 import CatCard from "../../components/catCard/CatCard";
 import { cards } from "../../data";
+import Features from "../../components/features/Features";
 
 function Home() {
     return (
@@ -16,6 +17,7 @@ function Home() {
                     <CatCard key={card.id} item={card} />
                 ))}
             </Slide>
+            <Features />
         </div>
     );
 }
