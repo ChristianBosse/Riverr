@@ -73,6 +73,63 @@ function Features() {
                     </div>
                 </div>
             </div>
+            <div className="services">
+                <div className="service_container">
+                    <h1>You need it, we've got it</h1>
+                    <ul className="categories">
+                        <li>
+                            <img src="./img/graphics-design.svg" alt="" />
+                            <br />
+                            Graphics & Design
+                        </li>
+                        <li>
+                            <img src="./img/marketing.svg" alt="" />
+                            <br />
+                            Digital Marketing
+                        </li>
+                        <li>
+                            <img src="./img/translation.svg" alt="" />
+                            <br />
+                            Writting & Translation
+                        </li>
+                        <li>
+                            <img src="./img/video.svg" alt="" />
+                            <br />
+                            Video & Animation
+                        </li>
+                        <li>
+                            <img src="./img/music.svg" alt="" />
+                            <br />
+                            Music & Video
+                        </li>
+                        <li>
+                            <img src="./img/tech.svg" alt="" />
+                            <br />
+                            Programming & Tech
+                        </li>
+                        <li>
+                            <img src="./img/business.svg" alt="" />
+                            <br />
+                            Business
+                        </li>
+                        <li>
+                            <img src="./img/lifestyle.svg" alt="" />
+                            <br />
+                            Lifestyle
+                        </li>
+                        <li>
+                            <img src="./img/data.svg" alt="" />
+                            <br />
+                            Data
+                        </li>
+                        <li>
+                            <img src="./img/photography.svg" alt="" />
+                            <br />
+                            Photography
+                        </li>
+                    </ul>
+                </div>
+            </div>
             <div className="features dark">
                 <div className="container">
                     <div className="item">

@@ -102,3 +102,42 @@
         }
     }
 }
+
+.services {
+    display: flex;
+    justify-content: center;
+    margin: 80px 0;
+    .service_container {
+        width: 74%;
+
+        h1 {
+        }
+
+        .categories {
+            list-style-type: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            text-align: center;
+            flex-wrap: wrap;
+
+            margin-top: 20px;
+
+            li {
+                width: 20%;
+                margin: 30px 0;
+                cursor: pointer;
+            }
+
+            img {
+                width: 48px;
+                height: 48px;
+                border-bottom: 2px solid rgb(138, 136, 136, 0.5);
+
+                &:hover {
+                    border-bottom: #1dbf73 solid 2px;
+                }
+            }
+        }
+    }
+}
